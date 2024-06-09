@@ -1,9 +1,14 @@
 {
     "require": {
+        "driftingly/rector-laravel": "^1.2",
+        "frosh/shopware-rector": "^0.4.0",
         "kubawerlos/php-cs-fixer-custom-fixers": "^3.21",
+        "larastan/larastan": "^2.9",
         "phpmd/phpmd": "^2.15",
         "phpstan/extension-installer": "^1.4",
         "phpstan/phpstan": "^1.11",
+        "phpstan/phpstan-phpunit": "^1.4",
+        "phpstan/phpstan-symfony": "^1.4",
         "rector/rector": "^1.1",
         "symplify/easy-coding-standard": "^12.2",
         "symplify/phpstan-rules": "^11.4"
