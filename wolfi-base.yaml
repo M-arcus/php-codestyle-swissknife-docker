@@ -30,8 +30,6 @@ contents:
     - php-8.2-sodium
     - php-8.2-xml
     - php-8.2-zip
-entrypoint:
-  command: /bin/sh -l
 archs:
   - x86_64
   - aarch64
