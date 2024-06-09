@@ -49,10 +49,15 @@ RUN composer global install -d /composer/ --optimize-autoloader --no-interaction
     composer global clearcache && \
     rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
 
-# Set vaolume and workdir
+# setup phpstan pro
+ENV PHPSTAN_PRO_WEB_PORT=11111
+EXPOSE "${PHPSTAN_PRO_WEB_PORT}"
+
+# Set volume and workdir
 VOLUME /app
 WORKDIR /app
 
-# setup phpstan
-ENV PHPSTAN_PRO_WEB_PORT=11111
-EXPOSE "${PHPSTAN_PRO_WEB_PORT}"
+CMD echo 'PHP Code Style Swissknife Docker' && \
+    echo '--------------------------------' && \
+    echo 'Try the following commands:' && \
+    ls /composer/vendor/bin
