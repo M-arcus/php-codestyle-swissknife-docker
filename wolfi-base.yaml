@@ -1,0 +1,37 @@
+contents:
+  keyring:
+    - https://packages.wolfi.dev/os/wolfi-signing.rsa.pub
+  repositories:
+    - https://packages.wolfi.dev/os
+  packages:
+    - wolfi-base
+    - curl
+    - zip
+    - composer
+    - php-8.2
+    - php-8.2-ctype
+    - php-8.2-curl
+    - php-8.2-dom
+    - php-8.2-fileinfo
+    - php-8.2-gd
+    - php-8.2-iconv
+    - php-8.2-intl
+    - php-8.2-mbstring
+    - php-8.2-mysqli
+    - php-8.2-mysqlnd
+    - php-8.2-openssl
+    - php-8.2-pdo
+    - php-8.2-pdo_mysql
+    - php-8.2-pdo_sqlite
+    - php-8.2-phar
+    - php-8.2-redis
+    - php-8.2-simplexml
+    - php-8.2-soap
+    - php-8.2-sodium
+    - php-8.2-xml
+    - php-8.2-zip
+entrypoint:
+  command: /bin/sh -l
+archs:
+  - x86_64
+  - aarch64
