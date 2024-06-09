@@ -60,4 +60,7 @@ WORKDIR /app
 CMD echo 'PHP Code Style Swissknife Docker' && \
     echo '--------------------------------' && \
     echo 'Try the following commands:' && \
-    ls /composer/vendor/bin
+    echo 'docker run --rm -v $(pwd):$(pwd) -w $(pwd) -u $(id -u):$(id -g) marcusmu/php-codestyle-swissknife-docker:latest ecs' && \
+    echo 'docker run --rm -v $(pwd):$(pwd) -w $(pwd) -u $(id -u):$(id -g) marcusmu/php-codestyle-swissknife-docker:latest phpstan' && \
+    echo 'docker run --rm -v $(pwd):$(pwd) -w $(pwd) -u $(id -u):$(id -g) marcusmu/php-codestyle-swissknife-docker:latest phpmd' && \
+    echo 'docker run --rm -v $(pwd):$(pwd) -w $(pwd) -u $(id -u):$(id -g) marcusmu/php-codestyle-swissknife-docker:latest rector'
