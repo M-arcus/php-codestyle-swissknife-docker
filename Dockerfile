@@ -15,7 +15,6 @@ FROM ghcr.io/m-arcus/php-codestyle-swissknife-docker:base
 #    php-8.2-iconv \
 #    php-8.2-intl \
 #    php-8.2-mbstring \
-#    php-8.2-mysqli \
 #    php-8.2-mysqlnd \
 #    php-8.2-openssl \
 #    php-8.2-pdo \
@@ -27,7 +26,8 @@ FROM ghcr.io/m-arcus/php-codestyle-swissknife-docker:base
 #    php-8.2-soap \
 #    php-8.2-sodium \
 #    php-8.2-xml \
-#    php-8.2-zip
+#    php-8.2-zip && \
+#    rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
 
 LABEL org.opencontainers.image.authors="M-arcus" \
       org.opencontainers.image.url="https://github.com/M-arcus/php-codestyle-swissknife-docker" \
@@ -37,8 +37,22 @@ LABEL org.opencontainers.image.authors="M-arcus" \
       org.opencontainers.image.licenses="MIT" \
       org.opencontainers.image.title="PHP Code Style Swissknife Docker"
 
+# Set php settings
 COPY php.ini /etc/php/conf.d/99-docker.ini
 
-COPY composer.json composer.lock ./
+# Install composer and composer packages
+ENV COMPOSER_HOME /composer
+ENV COMPOSER_ALLOW_SUPERUSER 1
+ENV PATH /composer/vendor/bin:$PATH
+COPY composer.json composer.lock /composer/
+RUN composer global install -d /composer/ --optimize-autoloader --no-interaction --no-progress --prefer-dist --no-dev && \
+    composer global clearcache && \
+    rm -rf /var/cache/apk/* /var/tmp/* /tmp/*
 
-RUN composer install --optimize-autoloader --no-interaction --no-progress --prefer-dist --no-dev
+# Set vaolume and workdir
+VOLUME /app
+WORKDIR /app
+
+# setup phpstan
+ENV PHPSTAN_PRO_WEB_PORT=11111
+EXPOSE "${PHPSTAN_PRO_WEB_PORT}"
