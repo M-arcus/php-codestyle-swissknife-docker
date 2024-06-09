@@ -10,6 +10,7 @@ on:
 
 env:
   DOCKER_HUB_USERNAME: 'marcusmu'
+  GITHUB_USERNAME_LOWERCASE: 'm-arcus'
   IMAGE_NAME: 'php-codestyle-swissknife-docker'
 
 permissions:
@@ -35,7 +36,7 @@ jobs:
       - name: Login into Docker Hub
         run: echo "${{ secrets.DOCKER_HUB_PAT }}" | docker login -u ${{ env.DOCKER_HUB_USERNAME }} --password-stdin
       - name: Build base and push
-        run: apko publish wolfi-base.yaml ghcr.io/${{ github.actor }}/${{ env.IMAGE_NAME }}:base
+        run: apko publish wolfi-base.yaml ghcr.io/${{ env.GITHUB_USERNAME_LOWERCASE }}/${{ env.IMAGE_NAME }}:base
   main-build:
     needs: [ base ]
     runs-on: ubuntu-latest
@@ -53,11 +54,11 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: |
             ${{ env.DOCKER_HUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            ghcr.io/${{ github.actor }}/${{ env.IMAGE_NAME }}:latest
+            ghcr.io/${{ env.GITHUB_USERNAME_LOWERCASE }}/${{ env.IMAGE_NAME }}:latest
       - name: Attest
         uses: actions/attest-build-provenance@v1
         id: attest
         with:
-          subject-name: ghcr.io/${{ github.actor }}/${{ env.IMAGE_NAME }}
+          subject-name: ghcr.io/${{ env.GITHUB_USERNAME_LOWERCASE }}/${{ env.IMAGE_NAME }}
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
