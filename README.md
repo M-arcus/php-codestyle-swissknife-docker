@@ -16,6 +16,6 @@ docker run --rm -v $(pwd):$(pwd) -w $(pwd) -u $(id -u):$(id -g) marcusmu/php-cod
 docker run --rm -v $(pwd):$(pwd) -w $(pwd) -u $(id -u):$(id -g) marcusmu/php-codestyle-swissknife-docker:latest rector ...
 ```
 
-Adapted from
+## Adapted from
  - https://github.com/aragon999/phpstan-shopware-docker/
  - https://github.com/shyim/php-cs-fixer-docker
