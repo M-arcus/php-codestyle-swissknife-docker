@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "134c0fede239e0637fb3aa105757bcca",
+    "content-hash": "94b9fc143b9d2321dfdae1199721e556",
     "packages": [
         {
             "name": "clue/ndjson-react",
@@ -715,62 +715,6 @@
                 "source": "https://github.com/nette/utils/tree/v4.0.4"
             },
             "time": "2024-01-17T16:50:36+00:00"
-        },
-        {
-            "name": "nikic/php-parser",
-            "version": "v4.19.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "4e1b88d21c69391150ace211e9eaf05810858d0b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4e1b88d21c69391150ace211e9eaf05810858d0b",
-                "reference": "4e1b88d21c69391150ace211e9eaf05810858d0b",
-                "shasum": ""
-            },
-            "require": {
-                "ext-tokenizer": "*",
-                "php": ">=7.1"
-            },
-            "require-dev": {
-                "ircmaxell/php-yacc": "^0.0.7",
-                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0 || ^9.0"
-            },
-            "bin": [
-                "bin/php-parse"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.9-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "PhpParser\\": "lib/PhpParser"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nikita Popov"
-                }
-            ],
-            "description": "A PHP parser written in PHP",
-            "keywords": [
-                "parser",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v4.19.1"
-            },
-            "time": "2024-03-17T08:10:35+00:00"
         },
         {
             "name": "pdepend/pdepend",
@@ -3527,43 +3471,35 @@
         },
         {
             "name": "symplify/phpstan-rules",
-            "version": "11.4.1.72",
+            "version": "13.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symplify/phpstan-rules.git",
-                "reference": "71583ee94eb22df184e5382225a7db7843298f33"
+                "reference": "94300a4bee2592c1e932eae5a3a316b117fb52ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symplify/phpstan-rules/zipball/71583ee94eb22df184e5382225a7db7843298f33",
-                "reference": "71583ee94eb22df184e5382225a7db7843298f33",
+                "url": "https://api.github.com/repos/symplify/phpstan-rules/zipball/94300a4bee2592c1e932eae5a3a316b117fb52ed",
+                "reference": "94300a4bee2592c1e932eae5a3a316b117fb52ed",
                 "shasum": ""
             },
             "require": {
-                "nette/utils": "^3.2 || ^4.0",
-                "nikic/php-parser": "^4.15.2",
+                "nette/utils": "^3.2.9 || ^4.0",
                 "php": "^7.2|^8.0",
-                "phpstan/phpstan": "^1.9.11",
-                "webmozart/assert": "^1.10"
+                "phpstan/phpstan": "^1.10.30",
+                "webmozart/assert": "^1.11"
             },
             "type": "phpstan-extension",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "11.1-dev"
-                },
                 "phpstan": {
                     "includes": [
-                        "config/services/services.neon",
-                        "config/packages/symfony/services.neon"
+                        "config/services/services.neon"
                     ]
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "Symplify\\PHPStanRules\\": [
-                        "src",
-                        "packages"
-                    ]
+                    "Symplify\\PHPStanRules\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3573,7 +3509,7 @@
             "description": "Set of Symplify rules for PHPStan",
             "support": {
                 "issues": "https://github.com/symplify/phpstan-rules/issues",
-                "source": "https://github.com/symplify/phpstan-rules/tree/11.4.1.72"
+                "source": "https://github.com/symplify/phpstan-rules/tree/13.0.0"
             },
             "funding": [
                 {
@@ -3585,7 +3521,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-16T17:01:43+00:00"
+            "time": "2024-06-12T04:19:31+00:00"
         },
         {
             "name": "webmozart/assert",
