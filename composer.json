@@ -1,4 +1,7 @@
 {
+    "name": "m_arcus/php-codestyle-swissknife-docker",
+    "description": "PHP-Codestyle-Swissknife-Docker",
+    "license": "MIT",
     "require": {
         "driftingly/rector-laravel": "^1.2",
         "frosh/shopware-rector": "^0.4.0",
