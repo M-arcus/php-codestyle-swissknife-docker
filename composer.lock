@@ -441,16 +441,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.66.1",
+            "version": "v3.68.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "cde186799d8e92960c5a00c96e6214bf7f5547a9"
+                "reference": "85fd31cced824749a732e697acdd1a3d657312f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/cde186799d8e92960c5a00c96e6214bf7f5547a9",
-                "reference": "cde186799d8e92960c5a00c96e6214bf7f5547a9",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/85fd31cced824749a732e697acdd1a3d657312f0",
+                "reference": "85fd31cced824749a732e697acdd1a3d657312f0",
                 "shasum": ""
             },
             "require": {
@@ -532,7 +532,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.66.1"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.68.3"
             },
             "funding": [
                 {
@@ -540,7 +540,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-05T14:43:25+00:00"
+            "time": "2025-01-27T16:37:32+00:00"
         },
         {
             "name": "frosh/shopware-rector",
@@ -3421,16 +3421,16 @@
         },
         {
             "name": "symplify/easy-coding-standard",
-            "version": "12.5.5",
+            "version": "12.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/easy-coding-standard/easy-coding-standard.git",
-                "reference": "16a6ac7f452e230fdcc81f1b35b2366903fcecf3"
+                "reference": "3e13f048a504049fd0c43f4bd82b94247d4b9409"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/16a6ac7f452e230fdcc81f1b35b2366903fcecf3",
-                "reference": "16a6ac7f452e230fdcc81f1b35b2366903fcecf3",
+                "url": "https://api.github.com/repos/easy-coding-standard/easy-coding-standard/zipball/3e13f048a504049fd0c43f4bd82b94247d4b9409",
+                "reference": "3e13f048a504049fd0c43f4bd82b94247d4b9409",
                 "shasum": ""
             },
             "require": {
@@ -3466,7 +3466,7 @@
             ],
             "support": {
                 "issues": "https://github.com/easy-coding-standard/easy-coding-standard/issues",
-                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/12.5.5"
+                "source": "https://github.com/easy-coding-standard/easy-coding-standard/tree/12.5.6"
             },
             "funding": [
                 {
@@ -3478,7 +3478,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-01-02T08:43:03+00:00"
+            "time": "2025-01-28T15:25:31+00:00"
         },
         {
             "name": "symplify/phpstan-rules",
